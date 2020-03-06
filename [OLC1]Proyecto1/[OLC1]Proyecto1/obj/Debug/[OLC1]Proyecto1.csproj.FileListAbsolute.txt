@@ -1,1 +1,2 @@
 c:\users\danpu\documents\visual studio 2012\Projects\[OLC1]Proyecto1\[OLC1]Proyecto1\bin\Debug\[OLC1]Proyecto1.exe.config
+C:\Users\danpu\Documents\GitHub\-OLC1-Proyecto1\[OLC1]Proyecto1\[OLC1]Proyecto1\bin\Debug\[OLC1]Proyecto1.exe.config
