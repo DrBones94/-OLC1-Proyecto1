@@ -6,28 +6,30 @@ using System.Threading.Tasks;
 
 namespace _OLC1_Proyecto1
 {
+  public enum Type
+  {
+    id, //Identificador
+    flecha, //Asignacion ->
+    puntoC, //Punto y coma ;
+    dosP, //Dos Puntos :
+    punto, //Punto .
+    or, //OR |
+    interrogacionC, //Interrogacion Cerrado ?
+    asterisco, //Asterisco *
+    mas, //Mas +
+    separador, //Separador ~
+    coma, //Coma ,
+    prConj, //Palabra reservada CONJ
+    caracter, //Caracter
+    numero, //Numero
+    comentario, //Comentario
+    corcheteA, //Corchete Abierto
+    corcheteC //Corchete Cerrado
+  }
+    
     class Token
     {
-        public enum Type
-        {
-            id, //Identificador
-            flecha, //Asignacion ->
-            puntoC, //Punto y coma ;
-            dosP, //Dos Puntos :
-            punto, //Punto .
-            or, //OR |
-            interrogacionC, //Interrogacion Cerrado ?
-            asterisco, //Asterisco *
-            mas, //Mas +
-            separador, //Separador ~
-            coma, //Coma ,
-            prConj, //Palabra reservada CONJ
-            caracter, //Caracter
-            numero, //Numero
-            comentario //Comentario
-        }
-
-        private String lexema;
+       private String lexema;
 
         public String Lexema
         {
