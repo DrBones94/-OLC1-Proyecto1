@@ -20,7 +20,7 @@ namespace _OLC1_Proyecto1
     /*Analizador Lexico*/
     public void A_Lexico(String entrada)
     {
-      String entradaA[] = entrada.split("\n");
+      String[] entradaA = entrada.Split('\n');
       int caracter = 0; //ASCII del caracter.
       int estado = 0;
       bool isChar = true; //Bandera para saber si es solo un caracter
@@ -300,6 +300,16 @@ namespace _OLC1_Proyecto1
     public void A_Sintactico(){
       posicion = 0;
       preanalisis = LTokens.ElementAt(posicion).Id;
+
+      S(); //Simbolo Inicial
+
+      if(posicion != LTokens.Count){
+        ErrorA e = new ErrorA(LTokens.ElementAt(posicion).Lexema, "Error Sintactico", "Se esperaban mas tokens", LTokens.ElementAt(posicion).Fila, LTokens.ElementAt(posicion).Columna);
+        LError.Add(e);
+      }else{
+
+      }
+
     }
   }
 }
