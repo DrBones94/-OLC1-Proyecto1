@@ -307,9 +307,30 @@ namespace _OLC1_Proyecto1
         ErrorA e = new ErrorA(LTokens.ElementAt(posicion).Lexema, "Error Sintactico", "Se esperaban mas tokens", LTokens.ElementAt(posicion).Fila, LTokens.ElementAt(posicion).Columna);
         LError.Add(e);
       }else{
-
+        //Investigar bien que debe ir en este codigo
       }
+    }
 
+    //Método de Parea
+    public void parea(Type analisis){
+      if(preanalisis == analisis){
+        posicion++;
+
+        if(posicion == LTokens.Count){
+          preanalisis = Type.eof;
+        }else{
+          preanalisis = LTokens.ElementAt(posicion).Id;
+        }
+      }else{
+        ErrorA e = new ErrorA(LTokens.ElementAt(posicion).Lexema, "Error Sintactico", "Se esperaba idToken" + analisis, LTokens.ElementAt(posicion).Fila, LTokens.ElementAt(posicion).Columna);
+        LError.Add(e);
+      }
+    }
+
+    public void S(){
+      switch(preanalisis){
+        case 
+      }
     }
   }
 }

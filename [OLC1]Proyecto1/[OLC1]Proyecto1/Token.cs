@@ -24,7 +24,8 @@ namespace _OLC1_Proyecto1
     numero, //Numero
     comentario, //Comentario
     corcheteA, //Corchete Abierto
-    corcheteC //Corchete Cerrado
+    corcheteC, //Corchete Cerrado
+    eof // Fin de archivo -1
   }
     
     class Token
