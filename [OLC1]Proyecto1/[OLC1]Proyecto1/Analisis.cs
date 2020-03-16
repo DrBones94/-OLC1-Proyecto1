@@ -296,41 +296,94 @@ namespace _OLC1_Proyecto1
       }
     }
 
-    //Analizador Sintactico
-    public void A_Sintactico(){
-      posicion = 0;
-      preanalisis = LTokens.ElementAt(posicion).Id;
+   // //Analizador Sintactico
+   // public void A_Sintactico(){
+   //   posicion = 0;
+   //   preanalisis = LTokens.ElementAt(posicion).Id;
 
-      S(); //Simbolo Inicial
+   //   S(); //Simbolo Inicial
 
-      if(posicion != LTokens.Count){
-        ErrorA e = new ErrorA(LTokens.ElementAt(posicion).Lexema, "Error Sintactico", "Se esperaban mas tokens", LTokens.ElementAt(posicion).Fila, LTokens.ElementAt(posicion).Columna);
-        LError.Add(e);
-      }else{
-        //Investigar bien que debe ir en este codigo
-      }
-    }
+   //   if(posicion != LTokens.Count){
+   //     ErrorA e = new ErrorA(LTokens.ElementAt(posicion).Lexema, "Error Sintactico", "Se esperaban mas tokens", LTokens.ElementAt(posicion).Fila, LTokens.ElementAt(posicion).Columna);
+   //     LError.Add(e);
+   //   }else{
+   //     //Investigar bien que debe ir en este codigo
+   //   }
+   // }
 
-    //Método de Parea
-    public void parea(Type analisis){
-      if(preanalisis == analisis){
-        posicion++;
+   // //Método de Parea
+   // public void parea(Type analisis){
+   //   if(preanalisis == analisis){
+   //     posicion++;
 
-        if(posicion == LTokens.Count){
-          preanalisis = Type.eof;
-        }else{
-          preanalisis = LTokens.ElementAt(posicion).Id;
-        }
-      }else{
-        ErrorA e = new ErrorA(LTokens.ElementAt(posicion).Lexema, "Error Sintactico", "Se esperaba idToken" + analisis, LTokens.ElementAt(posicion).Fila, LTokens.ElementAt(posicion).Columna);
-        LError.Add(e);
-      }
-    }
+   //     if(posicion == LTokens.Count){
+   //       preanalisis = Type.eof;
+   //     }else{
+   //       preanalisis = LTokens.ElementAt(posicion).Id;
+   //     }
+   //   }else{
+   //     ErrorA e = new ErrorA(LTokens.ElementAt(posicion).Lexema, "Error Sintactico", "Se esperaba idToken" + analisis, LTokens.ElementAt(posicion).Fila, LTokens.ElementAt(posicion).Columna);
+   //     LError.Add(e);
+   //   }
+   // }
 
-    public void S(){
-      switch(preanalisis){
-        case 
-      }
-    }
-  }
+   // public void S(){
+   //   switch(preanalisis){
+   //     case Type.prConj:
+   //       CONJUNTOS();
+   //       EXPRESIONES();
+   //       LEXEMAS();
+   //     break;
+   //     default:
+   //     break;
+   //   }
+   // }
+
+   // public void CONJUNTOS(){
+   //   switch(preanalisis){
+   //     case Type.prConj:
+   //       parea(Type.prConj);
+   //       parea(Type.dosP);
+   //       parea(Type.id);
+   //       parea(Type.flecha);
+   //       EXP();
+   //       parea(Type.puntoC);
+   //       CONJUNTOSP();
+   //     break;
+   //     default:
+   //       ErrorA e = new ErrorA(LTokens.ElementAt(posicion).Lexema, "Error Sintactico", "Se esperaba CONJ", LTokens.ElementAt(posicion).Fila, LTokens.ElementAt(posicion).Columna);
+   //       LError.Add(e);
+   //     break;
+   //   }
+   //  }
+
+   // public void EXP(){
+   //   switch(preanalisis){
+   //     case Type.asterisco:
+          
+   //     break;
+   //     case Type.mas:
+   //     break;
+   //     case Type.interrogacionC:
+   //     break;
+   //     case 
+   //   }
+   // }
+
+   // public void CONJUNTOSP(){
+   //   switch(preanalisis){
+   //     case Type.prConj:
+   //       parea(Type.prConj);
+   //       parea(Type.dosP);
+   //       parea(Type.id);
+   //       parea(Type.flecha);
+   //       EXP();
+   //       parea(Type.puntoC);
+   //       CONJUNTOSP();
+   //     break;
+   //     default:
+        
+   //   }
+   // }
+   //}
 }
